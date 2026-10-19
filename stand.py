@@ -24,4 +24,8 @@ class Stand:
         return self.__prezzo < other.__prezzo
 
     def __str__(self):
-        return f'{self.__codice} {self.__padiglione} {self.__padiglione} {self.__prezzo} {self.__stato}'
+        if self.libs is not None:
+            info_espositore = self.libs.code
+        else:
+            info_espositore = "Disponibile"
+        return f'{self.__codice} {self.__padiglione} {self.__prezzo} {info_espositore}'

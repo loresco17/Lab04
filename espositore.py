@@ -20,4 +20,8 @@ class Espositore:
         self.__stato = stato
 
     def __str__(self):
-        return f'{self.__codice} {self.__nome} {self.__cognome} {self.__stato}'
+        if self.libe is not None:
+            info_stand = self.libe.cods
+        else:
+            info_stand = "Disponibile"
+        return f'{self.__codice} {self.__nome} {self.__cognome} {info_stand}'
