@@ -20,6 +20,9 @@ class Stand:
     def libs(self, stato):
         self.__stato = stato
 
+    def __eq__(self, other):
+        return self.__codice == other.__codice
+
     def __lt__(self, other):
         return self.__prezzo < other.__prezzo
 

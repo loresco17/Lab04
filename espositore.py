@@ -19,6 +19,9 @@ class Espositore:
     def libe(self, stato):
         self.__stato = stato
 
+    def __eq__(self, other):
+        return self.__codice == other.__codice
+
     def __str__(self):
         if self.libe is not None:
             info_stand = self.libe.cods

@@ -49,17 +49,6 @@ class LingottoFiere:
             raise Exception("L'espositore ha già uno stand assegnato")
         stand_trovato.libs = espositore_trovato
         espositore_trovato.libe = stand_trovato
-        for e in self.__espositori:
-            fine=False
-            if e.code == codice_espositore:
-                for s in self.__stand:
-                    if s.cods == codice_stand:
-                        s.libs=e
-                        e.libe=s
-                        fine=True
-                        break
-            if fine:
-                break
 
     def elenca_espositori(self):
         for e in self.__espositori:
